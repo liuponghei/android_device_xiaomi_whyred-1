@@ -70,7 +70,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
 # Audio
@@ -155,7 +155,7 @@ PRODUCT_COPY_FILES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+   asusDoze
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -327,6 +327,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
-$(call inherit-product, device/xiaomi/whyred/treble.mk)
+$(call inherit-product, device/asus/Z01K/treble.mk)
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
+$(call inherit-product, vendor/asus/Z01K/Z01K-vendor.mk)
