@@ -15,11 +15,22 @@
 #
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),whyred)
+ifeq ($(TARGET_DEVICE),Z01K)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
+
+TEXFAT_MODULE := $(TARGET_RECOVERY_ROOT_OUT)/sbin/texfat.ko
+$(TEXFAT_MODULE): $(ANDROID_PRODUCT_OUT)/kernel
+	@cp $(KERNEL_MODULES_OUT)/texfat.ko $(TEXFAT_MODULE)
+	$(ANDROID_PRODUCT_OUT)/obj/KERNEL_OBJ/scripts/sign-file sha512 \
+		$(ANDROID_PRODUCT_OUT)/obj/KERNEL_OBJ/certs/signing_key.pem \
+		$(ANDROID_PRODUCT_OUT)/obj/KERNEL_OBJ/certs/signing_key.x509 \
+		$(TEXFAT_MODULE)
+
+ALL_DEFAULT_INSTALLED_MODULES += $(TEXFAT_MODULE)
+
 
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_APPS)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
