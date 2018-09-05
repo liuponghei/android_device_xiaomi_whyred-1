@@ -20,8 +20,8 @@
 set -e
 
 INITIAL_COPYRIGHT_YEAR=2018
-export DEVICE=whyred
-export VENDOR=xiaomi
+export DEVICE=Z01K
+export VENDOR=asus
 export TREBLE_COMPATIBLE=1
 
 # Load extract_utils and do some sanity checks
