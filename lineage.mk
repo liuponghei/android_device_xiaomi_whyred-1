@@ -26,20 +26,20 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 
 # Inherit from whyred device
-$(call inherit-product, device/xiaomi/whyred/device.mk)
+$(call inherit-product, device/asus/Z01K/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_whyred
-PRODUCT_DEVICE := whyred
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 5 Pro
+PRODUCT_NAME := lineage_Z01K
+PRODUCT_DEVICE := asus
+PRODUCT_MANUFACTURER := asus
+PRODUCT_BRAND := asus
+PRODUCT_MODEL := ASUS_Z01KD
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
-TARGET_VENDOR_PRODUCT_NAME := whyred
-TARGET_VENDOR_DEVICE_NAME := whyred
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=whyred PRODUCT_NAME=whyred
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_VENDOR_PRODUCT_NAME := asus
+TARGET_VENDOR_DEVICE_NAME := asus
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=whyred PRODUCT_NAME=asus
+PRODUCT_GMS_CLIENTID_BASE := android-asus
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V9.5.11.0.OEIMIFA release-keys"
-BUILD_FINGERPRINT := xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
+    PRIVATE_BUILD_DESC="asus-user 8.1.0 OPM1.171019.011 V9.5.11.0.OEIMIFA release-keys"
+BUILD_FINGERPRINT := asus/Z01K/Z01K:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
